@@ -3,3 +3,4 @@ pygame
 openai==0.27.0
 python-dotenv
 python-telegram-bot
+opencv-python

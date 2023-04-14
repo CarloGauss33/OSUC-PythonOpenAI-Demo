@@ -13,10 +13,17 @@ class MusicPlayer:
             if song.endswith(".mp3"):
                 self.available_songs.append(song)
 
+    def get_songs(self):
+        return '\n- '.join(self.available_songs)
+
     def play_song(self, song_name):
         if song_name in self.available_songs:
+            print(f"Playing {song_name}")
             mixer.init()
             mixer.music.load(os.path.join(self.music_folder, song_name))
             mixer.music.play()
-            return 'Reproduciendo canción: ' + song_name
-        return 'No se encontró la canción: ' + song_name
+        return
+
+    def stop_song(self, args=None):
+        mixer.music.stop()
+        return

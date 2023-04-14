@@ -34,7 +34,7 @@ class ChatManager:
 
 class CompletionsBot:
     def __init__(self):
-        self.engine = "gpt-3.5-turbo"
+        self.engine = "gpt-4"
 
     def get_chat_completion(self, messages, temperature=0.1, max_tokens=500):
         response = openai.ChatCompletion.create(
